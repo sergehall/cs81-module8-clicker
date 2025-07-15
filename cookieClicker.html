@@ -86,6 +86,12 @@
           font-weight: bold;
       }
 
+      #weirdCounter {
+          font-size: 2rem;
+          font-weight: bold;
+          transition: color 0.3s ease; /* Smooth color transition */
+      }
+
       #message {
           margin-top: 1rem;
           font-style: italic;
@@ -188,6 +194,13 @@
     <p id="message">Start clicking to earn cats!</p> <!-- Fun message -->
   </section>
 
+  <section>
+    <h3>🌀 Weird Hex Clicker</h3>
+    <p>Clicks (in HEX): <span id="weirdCounter">0</span></p>
+    <button id="weirdButton">☄️ Smash me!</button>
+    <p id="weirdMessage">What... are you doing?</p>
+  </section>
+
   <script>
     // Select necessary DOM elements
     const button = document.getElementById("cookieButton");
@@ -217,6 +230,62 @@
         document.body.style.backgroundColor = "#eef2ff";
       }
     });
+  </script>
+  <script>
+    // DOM elements for weird clicker
+    const weirdButton = document.getElementById("weirdButton");
+    const weirdCounter = document.getElementById("weirdCounter");
+    const weirdMessage = document.getElementById("weirdMessage");
+
+    let weirdCount = 0;
+
+    // Generate random color
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    weirdButton.addEventListener("click", () => {
+      weirdCount++;
+      // Convert count to HEX and display
+      weirdCounter.style.color = getRandomColor();
+      weirdCounter.textContent = weirdCount.toString(16).toUpperCase();
+
+      // Strange/funny messages at weird HEX milestones
+      switch (weirdCount) {
+        case 0xA: // 10 in decimal
+          weirdMessage.textContent = "You’ve reached 0xA. Hexcellence.";
+          break;
+        case 0xF: // 15
+          weirdMessage.textContent = "0xF... Full power achieved?";
+          break;
+        case 0x1E: // 30
+          weirdMessage.textContent = "That's 30 in HEX. Are you OK?";
+          break;
+        case 0x40: // 64
+          weirdMessage.textContent = "0x40?! Someone stop this madness!";
+          break;
+        default:
+          if (weirdCount > 0x50) {
+            weirdMessage.textContent = "You need serious help... 🧠";
+          }
+          break;
+      }
+    });
+
+    // Helper: generate random HEX color
+    function getRandomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
   </script>
 </main>
 
