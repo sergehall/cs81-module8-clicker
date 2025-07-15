@@ -6,7 +6,7 @@ Experimenting with `document.getElementById()` and seeing immediate visual updat
 
 ## How did you choose your milestone messages?
 
-I chose messages that are progressively more playful and sarcastic to reflect how obsessive clicking might become over time. The messages were inspired by the original Cookie Clicker tone — starting supportive and becoming slightly humorous as the click count increases.
+I chose messages that are progressively more playful and sarcastic to reflect how obsessive clicking might become over time. The messages were inspired by the original Cookie Clicker tone — starting supportive and becoming slightly humorous as the click count increases. I used the same idea for my second, weird counter.
 
 ## What challenge or bug surprised you?
 
@@ -14,7 +14,7 @@ At first, I mistakenly applied a double `border-left` style in both the `.task` 
 
 ## What personal twist did you add?
 
-I turned the main app into **Cat Clicker** with 🐱 emojis and messages tailored to cats instead of cookies. Then I added a second, weird and funny clicker that uses hexadecimal numbers, random colors, and bizarre milestone messages. It was a fun way to explore creative logic while using standard JavaScript.
+I turned the main app into **Cat Clicker** with 🐱 emojis and themed messages. In addition, I created a **Weird HEX Clicker** as a second section. It uses hexadecimal counting, random font colors, and ironic milestone messages. It’s intentionally bizarre, and that made it more fun to build.
 
 ## What real-world app uses this kind of interaction?
 
